@@ -1,23 +1,26 @@
 package HousingStructure;
 
+//package CompositeDesignPattern;
+
 public class Room implements IStructure {
     public String name;
-    public Room(String name) {
+
+    Room(String name){
         this.name = name;
     }
-    public void enter() {
-        System.out.println("You have entered the " +
-                this.getName());
-    }
-    public void exit() {
-        System.out.println("You have left the " +
-                this.getName());
-    }
-    public void location() {
-        System.out.println("You are currently in the" +
-                this.getName());
-    }
-    public String getName() {
+
+    public String getAddress() {
         return this.name;
-}
+    }
+
+    public void enter(){
+        System.out.println("You have entered in the "+ this.getAddress());
+    }
+    public void exit(){
+        System.out.println("you have left the "+this.getAddress());
+    }
+    public void location(){
+        System.out.println("you are currently in the" + this.getAddress());
+    }
+
 }
